@@ -1,0 +1,71 @@
+@import 'partials/variables';
+
+.header_navigator{
+    background-color: #00000031;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+
+    .components-left, .components-rigth{
+        display: flex;
+    }
+
+    .navigator_logo a{
+        .bxl-react{
+            color: $secundaryColor;
+        }
+
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        color: #fff;
+        text-decoration: none;
+        gap: 10px;
+        margin-right: 3rem;
+    }
+    .navigator_menu{
+        display: flex;
+        align-items: center;
+
+        .menu_item{
+            list-style: none;
+            margin-right: 10px;
+
+            div a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: #fff;
+
+                &:hover {
+                    color: $secundaryColor;
+                }
+            }
+        }
+    }
+
+    .navigator_submenu{
+        margin: 10px 0 0 16px;
+
+        ::marker{
+            color: #fff;
+        }
+
+        .submenu_item{
+            list-style: disc;
+
+            &:hover::marker{
+                color: $secundaryColor;
+            }
+
+            a{
+                text-decoration: none;
+                color: #fff;
+
+                &:hover{
+                    color: $secundaryColor;
+                }
+            }
+        }
+    }
+}
