@@ -56,7 +56,7 @@ function Menu(){
                     <span>Github</span>
                 </a>
                 <a href="https://github.com/Darlley" target="_blank">
-                    <i className='bx bx-paperclip' ></i>
+                    <i className='bx bxs-file-pdf bx-tada' ></i>
                     <span>Curriculo</span>
                 </a>
 
