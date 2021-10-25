@@ -7,7 +7,7 @@ function Header(){
             <div className="home__header--filter">
 
                 <Menu />
-                <p>Header</p>
+                
             </div>
         </header>
     )

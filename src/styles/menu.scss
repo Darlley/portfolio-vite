@@ -1,70 +1,120 @@
 @import 'partials/variables';
 
 .header_navigator{
-    background-color: #00000031;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 1rem 3rem;
+    padding: 3rem 0;
 
-    .components-left, .components-rigth{
+    .components-left{
         display: flex;
-    }
-
-    .navigator_logo a{
-        .bxl-react{
-            color: $secundaryColor;
-        }
-
-        display: flex;
-        align-items: center;
-        font-size: 1.5rem;
-        color: #fff;
-        text-decoration: none;
-        gap: 10px;
-        margin-right: 3rem;
-    }
-    .navigator_menu{
-        display: flex;
-        align-items: center;
-
-        .menu_item{
-            list-style: none;
-            margin-right: 10px;
-
-            div a {
-                display: flex;
-                align-items: center;
-                text-decoration: none;
-                color: #fff;
-
-                &:hover {
-                    color: $secundaryColor;
-                }
-            }
-        }
-    }
-
-    .navigator_submenu{
-        margin: 10px 0 0 16px;
-
-        ::marker{
-            color: #fff;
-        }
-
-        .submenu_item{
-            list-style: disc;
-
-            &:hover::marker{
+    
+        .navigator_logo a{
+            .bxl-react{
                 color: $secundaryColor;
+                font-size: 3rem;
             }
 
-            a{
-                text-decoration: none;
-                color: #fff;
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            gap: 10px;
+            margin-right: 3rem;
+        }
+        .navigator_menu{
+            display: flex;
+            align-items: center;
 
-                &:hover{
+            .menu_item{
+                list-style: none;
+                margin-right: 10px;
+                float: left;
+                position: relative;
+
+                div a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:hover {
+                        color: $secundaryColor;
+                    }
+                }
+
+                &.open div a{
                     color: $secundaryColor;
                 }
+            }
+        }
+
+        .navigator_submenu{
+            position: absolute;
+            left: 0px;
+            top: 20px;
+            border: 2px solid $secundaryColor;
+            border-radius: 0 0 15px 0;
+            margin-top: 10px;
+            padding: 10px 25px;
+            width: max-content;
+            box-sizing: border-box;
+            visibility: hidden;
+
+            &.dropdown{
+                visibility: visible;
+
+            }
+
+            ::marker{
+                color: #fff;
+            }
+
+            .submenu_item{
+                margin: 5px;
+                list-style: disc;
+
+                &:hover::marker{
+                    color: $secundaryColor;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:hover{
+                        color: $secundaryColor;
+                    }
+                }
+
+                &--disable{
+                    list-style: none;
+                    color: #bababa;
+                }
+            }
+        }
+    }
+
+    .components-rigth{
+        display: flex;
+        gap: 10px;
+        
+        a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            i{
+                font-size: 25px;
+            }
+
+            &:hover{
+                color: $secundaryColor;
             }
         }
     }
