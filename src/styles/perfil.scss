@@ -4,32 +4,23 @@
 
     display: flex;
     
-    .apresentacao__img {
-        flex: 2;
-        text-align: center;
-        img{
-            width: 240px;
-        }
-
-    }
     .apresentacao__bio{
         display: flex;
         flex-direction: column;
-        flex: 3;
 
         justify-content: center;
         text-align: left;
 
         p{
-            font-size: 25px;
+            font-size: 30px;
             
-            &:nth-child(1){
-                margin-bottom: 15px;
-            } 
-
             span{
-                padding: 3px;
+                font-size: 45px;
+                font-weight: bold;
                 color: #61dafb;
+                text-transform: uppercase;
+                display: inline-block;
+                margin: 20px 0;
 
                 &.text-filter{
                     background-color: #00000077;

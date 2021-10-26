@@ -1,20 +1,20 @@
+import "../styles/perfil.scss"
 
-import '../styles/perfil.scss'
-const imgPerfil = new URL('../assets/perfil.jpg', import.meta.url).href
-
-function Perfil(){
+function Perfil() {
     return (
         <div className="header__apresentacao">
-
-            <div className="apresentacao__img">
-                <img src={imgPerfil} alt="" />
-            </div>
             <div className="apresentacao__bio">
-                <p><span className="text-filter">É um prazer ter a sua visita</span>, espero que goste!</p>
-                <p>Meu nome é Darlley e sou desenvolvedor web júnior. Que tal formarmos uma parceria e construir websites e apps juntos?</p>
+
+                <p>É um prazer ter a sua visita, espero que goste! Meu nome é</p>
+                <p>
+                    <span className="text-filter">Darlley Brasil de Brito Furtado</span>
+                </p>
+
+                <p>Sou desenvolvedor web júnior. Que tal formarmos uma parceria e construir websites e apps juntos?</p>
+          
             </div>
         </div>
-    )
+    );
 }
 
-export default Perfil
+export default Perfil;
