@@ -112,7 +112,7 @@
             }
 
             .submenu_item{
-                margin: 5px;
+                margin: 5px 0;
                 list-style: disc;
 
                 &:hover::marker{
@@ -130,7 +130,8 @@
 
                 &--disable{
                     list-style: none;
-                    color: #bababa;
+                    color: #d7d7d7;
+                    margin: 10px 0 0 -15px;
                 }
             }
         }

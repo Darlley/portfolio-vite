@@ -1,6 +1,6 @@
 import Menu from "./Menu"
 import "./../styles/header.scss"
-import Perfil from "./Perfil"
+import Apresentacao from "./Apresentacao"
 
 function Header(){
     return (
@@ -8,7 +8,7 @@ function Header(){
             <div className="home__header--filter">
 
                 <Menu />
-                <Perfil />
+                <Apresentacao />
                 
             </div>
         </header>
