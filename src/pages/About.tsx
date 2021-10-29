@@ -1,13 +1,16 @@
-import Menu from "../components/Menu"
-import '../styles/about.scss'
+import Menu from "../components/Menu";
+import TituloPagina from "../components/TituloPágina";
+import '../styles/about.scss';
 
 function About(){
     console.log(location.pathname)
     return (
-        <main className="about">
-            <Menu name="about" />
-            <h1>About</h1>
-        </main>
+        <div className="about">
+            <div>
+                <Menu name="about" />
+            </div>
+            <TituloPagina />
+        </div>
     )
 }
 

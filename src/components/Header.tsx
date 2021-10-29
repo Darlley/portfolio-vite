@@ -1,5 +1,5 @@
 import Menu from "./Menu"
-import "./../styles/header.scss"
+import "./../styles/home.scss"
 import Apresentacao from "./Apresentacao"
 
 function Header(){

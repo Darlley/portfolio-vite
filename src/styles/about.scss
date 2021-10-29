@@ -1,4 +1,22 @@
+@import './partials/variables';
+
 .about{
-    padding: 0 6rem;
-    background-color: black;
+    height: 100vh;
+    
+    > div nav{
+        background-color: $primaryColor;
+    }
+    .about__header{
+        padding: 6rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .about{
+
+        > div nav{
+            background-color: $primaryColor;
+        }
+        
+    }
 }

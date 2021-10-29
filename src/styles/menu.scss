@@ -85,12 +85,13 @@
             position: absolute;
             left: 0px;
             top: 20px;
-            background: linear-gradient(90deg, #000000 0%, #00000000 60%);
+            background: #020202;
             margin-top: 10px;
             padding: 5px 25px;
             width: max-content;
             box-sizing: border-box;
             visibility: hidden;
+            border-radius: 5px;
 
             &.dropdown{
                 visibility: visible;
@@ -163,11 +164,12 @@
         width: 100%;
         z-index: 2;
         display: flex;
+        background-color: $primaryColor;
+
 
         &.active{
             flex-direction: column-reverse;
             height: 100vh;
-            background-color: $primaryColor;
         }
 
         .components-left {
