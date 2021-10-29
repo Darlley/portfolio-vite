@@ -6,8 +6,18 @@
     background-position: 0%;
 
     .home__header--filter{
-        padding: 0 6rem;
         height: 100%;
         background: linear-gradient(180deg, #00000000 0%, #000000 50%, $primaryColor 100%);
+    }
+}
+
+@media (max-width: 992px) {
+    .home__header{
+        background-size: cover;
+        background-position: 20%;
+
+        .home__header--filter{
+            background: linear-gradient(180deg, #00000000 0%, #000000 70%, $primaryColor 100%);
+        }
     }
 }

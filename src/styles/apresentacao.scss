@@ -1,6 +1,7 @@
 .header__apresentacao{
     color: #fff;
-    margin-top: 40%;
+    margin-top: 50vh;
+    padding: 1rem 6rem;
 
     display: flex;
     
@@ -24,6 +25,32 @@
                 display: inline-block;
                 margin: 20px 0;
                 letter-spacing: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header__apresentacao{
+        margin: 0;
+        height: 100vh;
+        
+        justify-content: flex-start;
+        padding: 0 1.5rem;
+        
+        .apresentacao__bio{
+            margin-top: 20vh;
+            
+            p{
+                font-size: 1.5rem;
+            }
+    
+            div{
+                span{
+                    font-size: 1.5rem;
+                    letter-spacing: 2px;
+                    margin: 10px 0;
+                }
             }
         }
     }

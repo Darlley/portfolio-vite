@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem 0;
+    padding: 3rem 6rem;
 
     .components-left{
         display: flex;
@@ -28,12 +28,6 @@
                 position: relative;
                 z-index: 2;
 
-                @keyframes pisca {
-                    to {
-                        opacity: 0;
-                    }
-                }
-
                 &::after{
                     content: '';
                     position: absolute;
@@ -45,10 +39,6 @@
                     z-index: 1;
                     top: -4px;
                     right: -12px;
-                    opacity: 1;
-            
-                    animation: pisca 2s linear infinite;
-                    
                 }
             }
             
@@ -130,7 +120,7 @@
 
                 &--disable{
                     list-style: none;
-                    color: #d7d7d7;
+                    color: #acacac;
                     margin: 10px 0 0 -15px;
                 }
             }
@@ -159,4 +149,145 @@
             }
         }
     }
+
+    .btn-mobile{
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .header_navigator{
+        padding: 2rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+
+        &.active{
+            flex-direction: column-reverse;
+            height: 100vh;
+            background-color: $primaryColor;
+        }
+
+        .components-left {
+            width: 100%;
+                        
+            &.active{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: flex-start;
+            }
+            
+            &.active .navigator_logo{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 2rem 0;
+            }
+            
+            .navigator_menu{
+                
+                display: none;
+                
+                &.active{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 100%;
+
+                    
+                    .menu_item{
+                        width: 100%;
+                        
+                        div a {
+                            padding: 10px;
+                            border: none;
+                            
+                            &:hover {
+                                color: $secundaryColor;
+                            }
+                        }
+                        
+                        &.open {
+                            div a{
+                                background: #070b1a;
+                                color: $secundaryColor;
+                            }
+
+                            & .navigator_submenu{
+                                display: flex;
+                                flex-direction: column;
+                                position: static;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .navigator_submenu{
+                display: none;
+                background: #070b1a;
+                margin: 0;
+                padding: 0 2rem 1rem;
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+        .components-rigth{
+            width: 100%;
+            display: none;
+            
+            &.active{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .btn-mobile {
+            margin-top: 5px;
+            color: white;
+            display: flex;
+            border: none;
+            background: none;
+            cursor: pointer;
+            
+            .hamburger {
+                border-top: 2px solid;
+                width: 20px;
+                margin-left: 5px;
+                
+                &::after, &::before {
+                    content: '';
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                    background: currentColor;
+                    margin-top: 5px;
+                    transition: 0.3s;
+                    position: relative;
+                }
+            }
+
+            &.active, .active{
+                color: $secundaryColor;
+            }
+
+            .active.hamburger {
+              border-top-color: transparent;
+            }
+            .active.hamburger::before {
+              transform: rotate(135deg);
+            }
+            .active.hamburger::after {
+              transform: rotate(-135deg);
+              top: -7px;
+            }
+        }
+        
+
+    }
+
 }

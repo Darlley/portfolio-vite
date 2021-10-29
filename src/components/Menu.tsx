@@ -1,22 +1,25 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import "../styles/menu.scss";
-import About from "../pages/About";
 
-function Menu() {
+type MenuProps = {
+  name?: string
+}
+function Menu({name}: MenuProps) {
   const [openDropdownPages, setOpenDropDownPages] = useState(false);
   const [openDropdownNotes, setOpenDropDownNotes] = useState(false);
+  const [opeMenuBurger, setOpenMenuBurger] = useState(false);
 
   return (
-    <nav className="header_navigator">
-      <div className="components-left">
+    <nav className={opeMenuBurger ? 'header_navigator active' : 'header_navigator'}>
+      <div className={opeMenuBurger ? 'components-left active': 'components-left'}>
         <div className="navigator_logo">
           <Link to="/">
             <i className="bx bxl-react"></i>
             <span>Darlley</span>
           </Link>
         </div>
-        <ul className="navigator_menu">
+        <ul className={opeMenuBurger ? 'navigator_menu active' : 'navigator_menu'}>
           <li className={openDropdownPages ? "menu_item open" : "menu_item"}>
             <div>
               <a
@@ -103,7 +106,7 @@ function Menu() {
         </ul>
       </div>
 
-      <div className="components-rigth">
+      <div className={opeMenuBurger ? 'components-rigth active': 'components-rigth'}>
         <a href="https://www.linkedin.com/in/darlleybrito/" target="_blank">
           <i className="bx bxl-linkedin-square"></i>
           <span>Linkedin</span>
@@ -113,10 +116,16 @@ function Menu() {
           <span>Github</span>
         </a>
         <a href="https://github.com/Darlley" target="_blank">
-          <i className="bx bxs-file-pdf bx-tada"></i>
+          <i className="bx bxs-file-pdf"></i>
           <span>Curriculo</span>
         </a>
       </div>
+
+      <button onClick={() => setOpenMenuBurger(!opeMenuBurger)} className={opeMenuBurger ? 'btn-mobile active' : 'btn-mobile'}>
+        {opeMenuBurger ? 'Fechar' : 'Abrir'}
+        <span className={opeMenuBurger ? 'hamburger active' : 'hamburger'}></span>
+      </button>
+      
     </nav>
   );
 }
